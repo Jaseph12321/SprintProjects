@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "5a12f2c1-6cf1-4125-898d-85dadbe78232",
+		"name": "sprint1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22635270"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"mgniType\": \"1\",\r\n            \"mgniCmNo\": \"1238567\",\r\n            \"mgniKacType\": \"2\",\r\n            \"mgniBankNo\": \"021\",\r\n            \"mgniCcy\": \"TWD\",\r\n            \"mgniPvType\": \"2\",\r\n            \"mgniBicaccNo\": \"123456712345671234567\",\r\n            \"mgniPReason\": \"what\",\r\n            \"mgniAmt\": 457878.0,\r\n            \"mgniCtName\": \"rita\",\r\n            \"mgniCtTel\": \"0541246789\",\r\n            \"mgniStatus\": \"2\",\r\n            \"mgniUTime\": \"2022-10-03T15:59:33\",\r\n            \"cashis\": [\r\n                {\r\n                    \"cashiMgniId\": \"MGI20220928032635145\",\r\n                    \"cashiAccNo\": \"1234567\",\r\n                    \"cashiCcy\": \"TWD\",\r\n                    \"cashiAmt\": 6000.0\r\n                },\r\n                {\r\n                    \"cashiMgniId\": \"MGI20220928032635145\",\r\n                    \"cashiAccNo\": \"1234567\",\r\n                    \"cashiCcy\": \"USD\",\r\n                    \"cashiAmt\": 3000.0\r\n                }\r\n            ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/mgni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"mgni"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mgniType\":\"1\",\r\n    \"mgniCmNo\":\"\",\r\n    \"mgniKacType\":,\r\n    \"mgniBankNo\":,\r\n    \"mgniCcy\":,\r\n    \"mgniPvType\":,\r\n    \"mgniBicaccNo\":,\r\n    \"mgniIType\":,\r\n    \"mgniPReason\":,\r\n    \"mgniAmt\":,\r\n    \"mgniCtTel\":,\r\n    \"mgniStatus\":,\r\n    \"cashi\":[\r\n        {\r\n            \"cashiMgniId\": \"MGI20220928032635145\",\r\n            \"cashiAccNo\": \"1234567\",\r\n            \"cashiCcy\": \"TWD\",\r\n            \"cashiAmt\": 6000.0\r\n        },\r\n        {\r\n            \"cashiMgniId\": \"MGI20220928032635145\",\r\n            \"cashiAccNo\": \"1234567\",\r\n            \"cashiCcy\": \"USD\",\r\n            \"cashiAmt\": 3000.0\r\n        }\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mgniKacType\":\"2\",\r\n    \"mgniBankNo\":\"021\",\r\n    \"mgniCcy\":\"TWD\",\r\n    \"mgniPvType\":\"2\",\r\n    \"mgniPReason\":\"updated\",\r\n    \"mgniAmt\":450178,\r\n    \"mgniCtName\":\"jr\",\r\n    \"mgniCtTel\":\"0541246789\",\r\n    \"mgniStatus\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/mgni/update/MGI20220928032635145",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"mgni",
+						"update",
+						"MGI20220928032635145"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "page",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
